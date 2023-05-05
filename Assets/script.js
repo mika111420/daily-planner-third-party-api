@@ -10,6 +10,26 @@ $('.saveBtn').on('click', function() {
   localStorage.setItem(time, textArea);
 })
 
+var dayToday = dayjs().format("dddd, MMMM D")
+$("#Today").text(dayToday)
+var currentTime = dayjs().format('H')
+var updateCurrentDayjs = setInterval(function () {
+  currentTime = dayjs().format('H')
+}, 3600000)
+console.log(currentTime)
+
+function updateHourClass(hour, element) {
+  if (currentTime > hour) {
+    $(element).addClass("past")
+  } else if (currentTime == hour) {
+    $(element).addClass("present")
+    $(element).removeClass("past")
+  } else {
+    $(element).addClass('future')
+    $(element).removeClass("past")
+    $(element).removeClass("present")
+  }
+}
 
 
 
