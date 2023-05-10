@@ -11,7 +11,7 @@ $('.saveBtn').on('click', function() {
 })
 
 var dayToday = dayjs().format("dddd, MMMM D")
-$("#Today").text(dayToday)
+$("#today").text(dayToday)
 var currentTime = dayjs().format('H')
 var updateCurrentDayjs = setInterval(function () {
   currentTime = dayjs().format('H')
@@ -25,12 +25,11 @@ function updateHourClass(hour, element) {
     $(element).addClass("present")
     $(element).removeClass("past")
   } else {
-    $(element).addClass('future')
+    $(element).addClass("future")
     $(element).removeClass("past")
     $(element).removeClass("present")
   }
 }
-
 
 
 $('#hour-9 .description').val(localStorage.getItem('hour-9'));
@@ -43,6 +42,32 @@ $('#hour-3 .description').val(localStorage.getItem('hour-3'));
 $('#hour-4 .description').val(localStorage.getItem('hour-4'));
 $('#hour-5 .description').val(localStorage.getItem('hour-5'));
 
+var nineAmText = $('#9AM')
+var nineAmButton = $('#9amButton')
+
+var tenAmText = $('#10AM')
+var tenAmButton = $('#10amButton')
+
+var elevenAmText = $('#11AM')
+var elevenAmButton = $('#11amButton')
+
+var twelvePmText = $('#12PM')
+var twelvePmButton = $('#12pmButton')
+
+var onePmText = $('#1PM')
+var onePmButton = $('#1pmButton')
+
+var twoPmText = $('#2PM')
+var twoPmButton = $('#2pmButton')
+
+var threePmText = $('#3PM')
+var threePmButton = $('#3pmButton')
+
+var fourPmText = $('#4PM')
+var fourPmButton = $('#4pmButton')
+
+var fivePmText = $('#5PM')
+var fivePmButton = $('#5pmButton')
   function hourColor(){
 
   }
