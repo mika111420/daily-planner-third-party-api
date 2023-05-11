@@ -5,23 +5,23 @@ $(document).ready(function () {
 })
 
 var updateCurrentDayjs = setInterval(function () {
-  currentTime = dayjs().format('H')
+  currentTime = dayjs().format('H');
+  console.log(currentTime)
+  changeTimeBlocks();
 }, 3600000)
-console.log(currentTime)
+
 
 function changeTimeBlocks() {
   var currentTime = dayjs().format('H');
   $(".time-block").each(function () {
-    var hourBlock = parseInt($(this).attr("id").split("-")[1]);
+    var hour = parseInt($(this).attr("id").split("-")[1]);
+    var element = $(this);
     if (currentTime > hour) {
-      $(element).addClass("past")
+      element.addClass("past");
     } else if (currentTime == hour) {
-      $(element).addClass("present")
-      $(element).removeClass("past")
+      element.addClass("present").removeClass("past");
     } else {
-      $(element).addClass("future")
-      $(element).removeClass("past")
-      $(element).removeClass("present")
+      element.addClass("future").removeClass("past present");
     }
   });
 }
