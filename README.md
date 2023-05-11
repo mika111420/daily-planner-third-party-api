@@ -5,7 +5,7 @@ This weeks challenge was to create a simple calendar application that allows a u
 
 The timeblocks can have an event saved and is saved in local storage
 
-Link to my deployed application: 
+Link to my deployed application: https://mika111420.github.io/daily-planner-third-party-api/
 
 <img width="1137" alt="Screen Shot 2023-05-11 at 10 31 40 AM" src="https://github.com/mika111420/daily-planner-third-party-api/assets/128564443/cd12379e-6eed-46a5-bc72-6098e7ec85f0">
 
